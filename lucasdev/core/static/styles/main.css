@@ -1,0 +1,220 @@
+.profile-pic {
+    max-width: 260px;
+}
+
+.hero-container{
+    padding-top: 220px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-delay-1 { animation-delay: 0.2s; }
+.fade-delay-2 { animation-delay: 0.4s; }
+.fade-delay-3 { animation-delay: 0.6s; }
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    color: #374151 !important;
+    margin-left: 15px;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: #2563eb !important;
+}
+
+.tech-stack span:hover {
+    background: #e0e1e2;
+    cursor: default;
+}
+
+
+
+.project-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.project-card {
+    padding: 24px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    background: #f8f8f8;
+    transition: all 0.25s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 17px 30px rgba(0,0,0,0.08);
+}
+
+.project-card i {
+    opacity: 0;
+    transition: 0.2s;
+    font-size: 2rem;
+}
+
+.project-card:hover i {
+    opacity: 1;
+}
+
+
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.social-btn {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(6px);
+
+    transition: all 0.25s ease;
+}
+
+
+.social-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    color: #fff;
+    background: #494949;
+
+    
+    box-shadow: 
+        0 0 0 2px rgba(221, 245, 255, 0.2),
+        0 8px 20px rgba(0,0,0,0.15),
+        0 0 15px rgba(187, 215, 226, 0.3);
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.social-btn:hover i {
+    transform: scale(1.15);
+}
+
+
+
+        .sino-btn {
+            background: none;
+            border: none;
+            color: #374151;
+            font-size: 1.3em;
+            cursor: pointer;
+            position: relative;
+            padding: 0;
+            line-height: 1;
+        }
+        .sino-btn:hover {
+            color: #2563eb;
+        }
+        .sino-badge {
+            position: absolute;
+            top: -7px;
+            right: -10px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.6em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .sino-badge.sem-conexao  { background-color: #95a5a6; }
+        .sino-badge.sem-mensagens { background-color: #27ae60; }
+
+        /* ─── Dropdown de Notificacoes ─── */
+        .sino-wrapper {
+            position: relative;
+        }
+        .notif-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 36px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            width: 320px;
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 1050;
+        }
+        .notif-dropdown.aberto { display: block; }
+        .notif-dropdown-header {
+            padding: 12px 15px;
+            background: #646464;
+            color: white;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .notif-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .notif-item:hover { background: #f8f9fa; }
+        .notif-item.nao-lida {
+            border-left: 3px solid #3498db;
+            background: #eef6ff;
+        }
+        .notif-item .notif-mensagem {
+            font-size: 0.88em;
+            color: #333;
+        }
+        .notif-item .notif-data {
+            font-size: 0.75em;
+            color: #999;
+            margin-top: 4px;
+        }
+        .notif-vazio {
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }

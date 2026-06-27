@@ -1,0 +1,65 @@
+{% extends 'core/base.html' %}
+
+
+
+{% block title %}Projects{% endblock title %}
+    
+
+
+{% block content %}
+    
+
+<section class="projects-page container">
+
+    <h1 class="text-center mt-5">Projects</h1>
+<p class="text-center text-muted mb-5">
+    A few projects I’ve built while learning software development.
+</p>
+
+    <div class="project-cards-container">
+
+        {% for project in projects %}
+
+            <a href="{{ project.link }}" 
+               class="fade-in project-card text-decoration-none text-dark d-block"
+               target="_blank" 
+               rel="noopener noreferrer">
+
+                <div class="p-3">
+
+                    <div class="d-flex align-items-center mb-2">
+
+                        
+                        <h5 class="mb-0">{{ project.title }}</h5>
+
+                        
+                        <div class="ms-auto d-flex gap-2">
+                            {% for tech in project.technologies.all %}
+                                {% if tech.icon %}
+                                    <i class="{{ tech.icon }}" title="{{ tech.name }}"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <p>{{ project.description }}</p>
+
+                </div>
+
+            </a>
+
+        {% empty %}
+
+            <span>No projects right now...</span>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+    
+
+
+{% endblock content %}
+    

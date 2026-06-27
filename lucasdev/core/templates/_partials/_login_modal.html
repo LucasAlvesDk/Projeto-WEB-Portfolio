@@ -1,0 +1,44 @@
+<div id="modal-login" style="
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+">
+    <div style="
+        background: white;
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 30px;
+        border-radius: 8px;
+    ">
+        <h3 style="margin-bottom: 20px; color: #2c3e50;">Login para Editar</h3>
+        <div style="margin-bottom: 15px;">
+            <label>Username:</label><br>
+            <input type="text" id="login-username" style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label>Password:</label><br>
+            <input type="password" id="login-password" style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+        <p id="login-erro" style="color: red; display: none;"></p>
+        <button id="btn-login" style="
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        ">Entrar</button>
+        <button id="btn-cancelar-login" style="
+            background-color: #95a5a6;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        ">Cancelar</button>
+    </div>
+</div>
